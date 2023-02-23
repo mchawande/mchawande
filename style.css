@@ -61,16 +61,12 @@ html {
 }
 
 .quote-title,
-.quote-author {
+.quote-author,
+.quote-contents {
     font-weight: bold;
 }
 
-.quote-card.loading .quote-title,
-.quote-card.loading .quote-date,
-.quote-card.loading .quote-contents,
-.quote-card.loading .quote-line-2,
-.quote-card.loading .quote-tags,
-.quote-card.loading .quote-author {
+.quote-card.loading :where(.quote-title, .quote-date, .quote-contents, .quote-line-2, .quote-tags, .quote-author) {
     min-width: 200px;
     min-height: 20px;
     animation: pulse 1s infinite ease-in-out;
@@ -95,10 +91,6 @@ html {
 
 .quote-card.loading .quote-author {
     min-width: 150px;
-}
-
-.quote-card .quote-contents {
-    font-weight: bold;
 }
 
 @keyframes pulse {
